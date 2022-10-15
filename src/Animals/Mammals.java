@@ -1,6 +1,6 @@
 package Animals;
 
-public class Mammals extends Animals {
+public abstract class Mammals extends Animals {
     private int speed;
     public Mammals(String name, int year, String habitat, int speed) {
         super(name, year, habitat);
@@ -11,18 +11,22 @@ public class Mammals extends Animals {
 
     }
 
-    @Override
-    public void eat() {
-
+    public int getSpeed() {
+        return speed;
     }
 
     @Override
-    public void sleep() {
+    public void eat(String name, String eat) {
+        System.out.println( name + " ест " + eat);
+    }
 
+    @Override
+    public void sleep(String name) {
+        System.out.println(name + " спят по ночам");
     }
 
     @Override
     public void move() {
-
+        System.out.println("По земле");
     }
 }
