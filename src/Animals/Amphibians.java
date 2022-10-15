@@ -9,6 +9,10 @@ public class Amphibians extends Animals{
         this.hunt = hunt;
     }
 
+    public void hunting() {
+
+    }
+
     @Override
     public void eat() {
 

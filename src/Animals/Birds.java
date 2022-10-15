@@ -7,6 +7,10 @@ public class Birds extends Animals{
         this.hunt = hunt;
     }
 
+    public void hunting() {
+
+    }
+
     @Override
     public void eat() {
 

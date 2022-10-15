@@ -7,6 +7,10 @@ public class Mammals extends Animals {
         this.speed = speed;
     }
 
+    public void walk() {
+
+    }
+
     @Override
     public void eat() {
 
