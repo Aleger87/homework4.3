@@ -10,4 +10,15 @@ public class Predators extends Mammals{
 
     public void hunting() {
     }
+
+    public String getTypeFood() {
+        return typeFood;
+    }
+
+    @Override
+    public String toString() {
+        return "Predators{" +
+                "typeFood='" + typeFood + '\'' +
+                '}';
+    }
 }
