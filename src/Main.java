@@ -14,6 +14,15 @@ public class Main {
         giraffe.sleep();
         giraffe.move();
 
+        Herbivore gaz= new Herbivore("Газель", 1, "Лес", 40, "траву");
+        gaz.eat( gaz.getTypeFood());
+        gaz.sleep();
+        gaz.move();
+
+        if (gazelle.equals(gaz)) {
+            throw new RuntimeException(gaz.getName() + " -это животное уже есть в зоопарке" );
+        }
+
         Herbivore horse = new Herbivore("Лошадь", 5, "Домашнее животное", 60, "Сено");
         horse.eat( horse.getTypeFood());
         horse.sleep();
@@ -79,5 +88,6 @@ public class Main {
 
 
     }
+
 
 }

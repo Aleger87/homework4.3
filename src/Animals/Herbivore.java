@@ -1,5 +1,7 @@
 package Animals;
 
+import java.util.Objects;
+
 public class Herbivore extends Mammal {
     private String typeFood;
 
@@ -24,4 +26,7 @@ public class Herbivore extends Mammal {
                 "typeFood='" + typeFood + '\'' +
                 '}';
     }
+
+
+
 }
