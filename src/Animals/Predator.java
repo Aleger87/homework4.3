@@ -1,14 +1,15 @@
 package Animals;
 
-public class Predators extends Mammals{
+public class Predator extends Mammal {
     private String typeFood;
 
-    public Predators(String name, int year, String habitat, int speed, String typeFood) {
+    public Predator(String name, int year, String habitat, int speed, String typeFood) {
         super(name, year, habitat, speed);
         this.typeFood = typeFood;
     }
 
     public void hunting() {
+        System.out.println(getName() +" охотятся на других животных");
     }
 
     public String getTypeFood() {

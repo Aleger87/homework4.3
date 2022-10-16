@@ -1,16 +1,17 @@
 package Animals;
 
-public class Herbivorous extends Mammals{
+public class Herbivore extends Mammal {
     private String typeFood;
 
 
 
-    public Herbivorous(String name, int year, String habitat, int speed, String typeFood) {
+    public Herbivore(String name, int year, String habitat, int speed, String typeFood) {
         super(name, year, habitat, speed);
         this.typeFood = typeFood;
     }
 
     public void graze() {
+        System.out.println(getName()+ " пасутся на лугах");
     }
 
     public String getTypeFood() {

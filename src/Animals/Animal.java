@@ -1,15 +1,13 @@
 package Animals;
 
 
-import java.util.Arrays;
-
-public abstract class Animals {
+public abstract class Animal {
     private String name;
     private int year;
     private String habitat;
-    private  String animal = "Animal";
 
-    public Animals(String name, int year, String habitat) {
+
+    public Animal(String name, int year, String habitat) {
         setName(name);
         if (year < 0) {
             this.year = Math.abs(year);
@@ -20,9 +18,9 @@ public abstract class Animals {
 
     }
 
-    public abstract void eat(String name, String eat);
+    public abstract void eat(String eat);
 
-    public abstract void  sleep(String name);
+    public abstract void  sleep();
 
     public abstract void  move ();
 
@@ -38,9 +36,9 @@ public abstract class Animals {
 
 
     public void setName(String name) {
-        if (getName() == animal || getName() == null){
+        if (getName() == "Animal" || getName() == null){
             if (name == null || name.isEmpty() || name.isBlank()) {
-                this.name = animal;
+                this.name = "Animal";
             }else{
                 this.name = name;
             }

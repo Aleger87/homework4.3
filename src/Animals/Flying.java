@@ -1,6 +1,6 @@
 package Animals;
 
-public class Flying extends Birds{
+public class Flying extends Bird {
     private String typeMovement;
 
     public Flying(String name, int year, String habitat, String typeMovement) {
@@ -9,7 +9,7 @@ public class Flying extends Birds{
     }
 
     public void fly() {
-
+        System.out.println(getName() + " летает по небу");
     }
 
     public String getTypeMovement() {
