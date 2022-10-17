@@ -6,6 +6,7 @@ public class Main {
 
         Herbivore gazelle = new Herbivore("Газель", 1, "Лес", 40, "траву");
         gazelle.eat( gazelle.getTypeFood());
+        gazelle.walk();
         gazelle.sleep();
         gazelle.move();
 
@@ -14,14 +15,7 @@ public class Main {
         giraffe.sleep();
         giraffe.move();
 
-        Herbivore gaz= new Herbivore("Газель", 1, "Лес", 40, "траву");
-        gaz.eat( gaz.getTypeFood());
-        gaz.sleep();
-        gaz.move();
 
-        if (gazelle.equals(gaz)) {
-            throw new RuntimeException(gaz.getName() + " -это животное уже есть в зоопарке" );
-        }
 
         Herbivore horse = new Herbivore("Лошадь", 5, "Домашнее животное", 60, "Сено");
         horse.eat( horse.getTypeFood());
@@ -80,11 +74,22 @@ public class Main {
         albatross.eat( " рыбу");
         albatross.sleep();
         albatross.move();
+        albatross.getHabitat();
+        albatross.hunting();
 
         Flying falcon = new Flying("Сокол", 3, "Степь", null);
         falcon.eat( "мышей");
         falcon.sleep();
         falcon.move();
+
+        Herbivore gaz= new Herbivore("Газель", 1, "Лес", 40, "траву");
+        gaz.eat( gaz.getTypeFood());
+        gaz.sleep();
+        gaz.move();
+
+        if (gazelle.equals(gaz)) {
+            throw new RuntimeException(gaz.getName() + " -это животное уже есть в зоопарке" );
+        }
 
 
     }

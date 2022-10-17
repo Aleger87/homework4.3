@@ -6,7 +6,7 @@ public abstract class Bird extends Animal {
     }
 
     public void hunting() {
-
+        System.out.println(getName() + " охотится на рыб, мелких животных, рыб" );
     }
 
     @Override

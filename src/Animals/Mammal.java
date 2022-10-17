@@ -8,7 +8,7 @@ public abstract class Mammal extends Animal {
     }
 
     public void walk() {
-
+        System.out.println(getName() + " гуляет " + getHabitat());
     }
 
     public int getSpeed() {
