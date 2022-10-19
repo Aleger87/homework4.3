@@ -1,15 +1,15 @@
 package Animals;
 
 
-import java.util.Arrays;
+import java.util.Objects;
 
-public abstract class Animals {
+public abstract class Animal {
     private String name;
     private int year;
     private String habitat;
-    private  String animal = "Animal";
 
-    public Animals(String name, int year, String habitat) {
+
+    public Animal(String name, int year, String habitat) {
         setName(name);
         if (year < 0) {
             this.year = Math.abs(year);
@@ -20,15 +20,16 @@ public abstract class Animals {
 
     }
 
-    public abstract void eat(String name, String eat);
+    public abstract void eat(String eat);
 
-    public abstract void  sleep(String name);
+    public abstract void  sleep();
 
     public abstract void  move ();
 
     public int getYear() {
         return year;
     }
+
     public String getName() {
         return name;
     }
@@ -36,11 +37,10 @@ public abstract class Animals {
         return habitat;
     }
 
-
     public void setName(String name) {
-        if (getName() == animal || getName() == null){
-            if (name == null || name.isEmpty() || name.isBlank()) {
-                this.name = animal;
+        if (getName().equals("Animal") || getName() == null){
+            if (name.equals(null) || name.isEmpty() || name.isBlank()) {
+                this.name = "Animal";
             }else{
                 this.name = name;
             }
@@ -51,7 +51,7 @@ public abstract class Animals {
 
 
     public void setHabitat(String habitat) {
-        if (getHabitat() == null || habitat.isEmpty() || habitat.isBlank()) {
+        if (getHabitat().equals(null) || habitat.isEmpty() || habitat.isBlank()) {
             this.habitat = "Планета Земля";
         } else {
             this.habitat = habitat;
@@ -59,4 +59,12 @@ public abstract class Animals {
 
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return year == animal.year && Objects.equals(name, animal.name) && Objects.equals(habitat, animal.habitat);
+    }
 }

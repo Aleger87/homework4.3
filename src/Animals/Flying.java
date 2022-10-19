@@ -1,6 +1,8 @@
 package Animals;
 
-public class Flying extends Birds{
+import java.util.Objects;
+
+public class Flying extends Bird {
     private String typeMovement;
 
     public Flying(String name, int year, String habitat, String typeMovement) {
@@ -9,7 +11,7 @@ public class Flying extends Birds{
     }
 
     public void fly() {
-
+        System.out.println(getName() + " летает по небу");
     }
 
     public String getTypeMovement() {
@@ -23,4 +25,14 @@ public class Flying extends Birds{
                 "typeMovement='" + typeMovement + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Flying flying = (Flying) o;
+        return Objects.equals(typeMovement, flying.typeMovement);
+    }
+
 }
