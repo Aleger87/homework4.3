@@ -12,8 +12,6 @@ public abstract class Bird extends Animal {
     @Override
     public void eat( String eat) {
         System.out.println(getName() + " ест " + eat);
-
-
     }
 
     @Override

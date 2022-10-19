@@ -1,5 +1,7 @@
 package Animals;
 
+import java.util.Objects;
+
 public class Predator extends Mammal {
     private String typeFood;
 
@@ -22,4 +24,15 @@ public class Predator extends Mammal {
                 "typeFood='" + typeFood + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Predator predator = (Predator) o;
+        return Objects.equals(typeFood, predator.typeFood);
+    }
+
+
 }

@@ -38,8 +38,8 @@ public abstract class Animal {
     }
 
     public void setName(String name) {
-        if (getName() == "Animal" || getName() == null){
-            if (name == null || name.isEmpty() || name.isBlank()) {
+        if (getName().equals("Animal") || getName() == null){
+            if (name.equals(null) || name.isEmpty() || name.isBlank()) {
                 this.name = "Animal";
             }else{
                 this.name = name;
@@ -51,7 +51,7 @@ public abstract class Animal {
 
 
     public void setHabitat(String habitat) {
-        if (getHabitat() == null || habitat.isEmpty() || habitat.isBlank()) {
+        if (getHabitat().equals(null) || habitat.isEmpty() || habitat.isBlank()) {
             this.habitat = "Планета Земля";
         } else {
             this.habitat = habitat;

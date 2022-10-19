@@ -1,5 +1,7 @@
 package Animals;
 
+import java.util.Objects;
+
 public abstract class Mammal extends Animal {
     private int speed;
     public Mammal(String name, int year, String habitat, int speed) {
@@ -29,4 +31,14 @@ public abstract class Mammal extends Animal {
     public void move() {
         System.out.println(getName() + " по земле");
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Mammal mammal = (Mammal) o;
+        return speed == mammal.speed;
+    }
+
 }

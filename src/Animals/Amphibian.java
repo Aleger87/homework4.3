@@ -8,7 +8,6 @@ public class Amphibian extends Animal {
 
     public void hunting() {
         System.out.println (getName() + " охотятся на мелких животных и насекомых");
-
     }
 
     @Override
